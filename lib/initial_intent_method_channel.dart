@@ -10,9 +10,9 @@ class MethodChannelInitialIntent extends InitialIntentPlatform {
   final methodChannel = const MethodChannel('initial_intent');
 
   @override
-  Future<Map<String, dynamic>> getData() async {
+  Future<String> getData() async {
     final version =
-        await methodChannel.invokeMapMethod<String, dynamic>('getData');
-    return version ?? {};
+        await methodChannel.invokeMethod<String>('getData');
+    return version ?? '';
   }
 }

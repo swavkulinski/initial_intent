@@ -4,13 +4,13 @@ Demonstrates how to use the initial_intent plugin.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This specific demonstrator requires the data to be in JSON format. 
 
-A few resources to get you started if this is your first Flutter project:
+Install the app then scan image below with QR reader app which can launch other apps e.g. QR & Barcode Scanner
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![image info](../assets/qrcode.jpg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Note on creating your custom schema for Android
+
+This app uses `myapp` schema to listen to the intent. If using custom schema avoid using symbols that would make the data look like ordinary URL with the path or use illegal symbols int the schema name. This may cause your QR reader to open the browser instead of your app as it will try to apply `http` schema. Symbols like `_` in can cause this.

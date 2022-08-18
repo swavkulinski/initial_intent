@@ -23,5 +23,5 @@ abstract class InitialIntentPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<Map<String, dynamic>> getData();
+  Future<String> getData();
 }
