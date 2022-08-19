@@ -34,7 +34,7 @@ class InitialIntentPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   }
 
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
-    intentData = binding.activity.intent.data?.encodedSchemeSpecificPart?.substring(startIndex = 2) ?: ""
+    intentData = binding.activity.intent.data?.toString() ?: ""
   }
 
   override fun onDetachedFromActivityForConfigChanges() {

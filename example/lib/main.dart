@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    final d = json.decode(_initialIntent);
+    final d = json.decode(Uri.decodeFull(_initialIntent).split('//')[1]);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
