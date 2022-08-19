@@ -11,8 +11,8 @@ class MethodChannelInitialIntent extends InitialIntentPlatform {
 
   @override
   Future<String> getData() async {
-    final version =
+    final initialIntent =
         await methodChannel.invokeMethod<String>('getData');
-    return version ?? '';
+    return initialIntent ?? '';
   }
 }

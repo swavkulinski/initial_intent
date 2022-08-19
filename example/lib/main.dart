@@ -42,18 +42,17 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    final d = json.decode(Uri.decodeFull(_initialIntent).split('//')[1]);
+    final d = Uri.decodeFull(_initialIntent);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Intent data: ${_encoder.convert(d)}\n',maxLines: 20,),
+          child: Text('Intent data: $d\n',maxLines: 20,),
         ),
       ),
     );
   }
 
-  static const _encoder = JsonEncoder.withIndent('  ');
 }
